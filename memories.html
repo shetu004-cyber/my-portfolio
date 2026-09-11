@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Memories & Journey</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .memories-container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-bottom: 20px;
+      color: #0083bb;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    .page-title {
+      color: #0083bb;
+      margin-bottom: 8px;
+    }
+
+    .page-sub {
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 25px;
+    }
+
+    .album-title {
+      text-align: center;
+      color: #222;
+      font-size: 20px;
+      font-weight: 700;
+      margin: 25px 0 15px 0;
+    }
+
+    /* ফটো গ্রিড লেআউট (পাশে পাশে ২টা করে দেখাবে) */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+    .photo-card {
+      background: #ffffff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .photo-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .photo-caption {
+      padding: 10px;
+      font-size: 13px;
+      color: #444;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="memories-container">
+    <a href="index.html" class="back-btn">← Back to Portfolio</a>
+    
+    <h2 class="page-title">My Memories & Journey</h2>
+    <p class="page-sub">Here are some captured moments of my life!</p>
+
+    <!-- অ্যালবামের টাইটেল -->
+    <h3 class="album-title">📁 Old Memories</h3>
+
+    <!-- ৫টি ছবির ২ কলাম গ্রিড -->
+    <div class="gallery-grid">
+      
+      <div class="photo-card">
+        <img src="pic1.jpg" alt="Memory 1">
+        <div class="photo-caption">on my prime ⚡</div>
+      </div>
+
+      <div class="photo-card">
+        <img src="pic2.jpg" alt="Memory 2">
+        <div class="photo-caption">on my prime ⚡</div>
+      </div>
+
+      <div class="photo-card">
+        <img src="pic3.jpg" alt="Memory 3">
+        <div class="photo-caption">on my prime ⚡</div>
+      </div>
+
+      <div class="photo-card">
+        <img src="pic4.jpg" alt="Memory 4">
+        <div class="photo-caption">on my prime 💥</div>
+      </div>
+
+      <div class="photo-card">
+        <img src="pic5.jpg" alt="Memory 5">
+        <div class="photo-caption">on my prime ⚡</div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
+

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arafat Rahman Shetu - Portfolio</title>
+  
+  <!-- Font Awesome CDN (সোশ্যাল আইকনের জন্য) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- প্রধান স্টাইলশিট -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ন্যাভবার -->
+  <nav class="navbar">
+    <div class="logo">🤍 WELCOME 🤍</div>
+    <div class="menu-icon"><i class="fa-solid fa-bars"></i></div>
+  </nav>
+
+  <!-- মেইন কন্টেইনার -->
+  <div class="container">
+    <!-- প্রোফাইল ছবি -->
+    <div class="profile-wrapper">
+      <img src="profile.jpg" alt="Arafat Rahman Shetu" class="profile-img">
+    </div>
+
+    <!-- নাম ও ট্যাগলাইন -->
+    <h1 class="name">Arafat Rahman Shetu</h1>
+    <h3 class="tagline"><span id="typing-text"></span></h3>
+
+    <!-- বায়ো -->
+    <p class="bio">
+      I am learning web development and working hard to improve my coding skills every day. I love creating new designs and always try my best to learn modern technology.
+    </p>
+
+    <!-- বাটন সেকশন -->
+    <div class="btn-group">
+      <button class="btn btn-primary" onclick="toggleContact()">Say Hello 👋</button>
+      <a href="memories.html" class="btn btn-secondary">Know Me <span>→</span></a>
+    </div>
+  </div>
+
+  <!-- ভাসমান মেসেজ বাটন -->
+  <div class="chat-floating-btn" onclick="toggleContact()">
+    <i class="fa-regular fa-comment-dots"></i>
+  </div>
+
+  <!-- পপ-আপ কন্টাক্ট মোডাল -->
+  <div id="contact-popover" class="contact-card">
+    <div class="card-header">
+      <h4>Contact Me</h4>
+      <span class="close-icon" onclick="toggleContact()">&times;</span>
+    </div>
+
+    <!-- ইমেইল সেকশন -->
+    <div class="email-field">
+      <i class="fa-regular fa-envelope"></i> <span>shetu@gmail.com</span>
+    </div>
+
+    <!-- সোশাল মিডিয়া লিংক -->
+    <div class="social-links">
+      <a href="https://github.com" target="_blank"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.facebook.com/share/19JMsQHn2Y/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/shetu_04_?stkn=MWN5YjJ6MTl6eDVmMA==" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+      <a href="https://t.me/shetu004" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+    </div>
+  </div>
+
+  <!-- জাভাস্ক্রিপ্ট সেকশন -->
+  <script>
+    // পপ-আপ কন্টাক্ট কার্ড ওপেন/ক্লোজ ফাংশন
+    function toggleContact() {
+      const card = document.getElementById("contact-popover");
+      if (card.style.display === "block") {
+        card.style.display = "none";
+      } else {
+        card.style.display = "block";
+      }
+    }
+
+    // টাইপিং ইফেক্ট স্ক্রিপ্ট
+    const textElement = document.getElementById("typing-text");
+    const words = ["Learning Web Development", "Building Small Projects", "Improving My Skills"];
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function typeEffect() {
+      const currentWord = words[wordIndex];
+      
+      if (isDeleting) {
+        textElement.textContent = currentWord.substring(0, charIndex - 1);
+        charIndex--;
+      } else {
+        textElement.textContent = currentWord.substring(0, charIndex + 1);
+        charIndex++;
+      }
+
+      if (!isDeleting && charIndex === currentWord.length) {
+        isDeleting = true;
+        setTimeout(typeEffect, 1500);
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+        setTimeout(typeEffect, 500);
+      } else {
+        setTimeout(typeEffect, isDeleting ? 50 : 100);
+      }
+    }
+
+    typeEffect();
+  </script>
+
+</body>
+</html>
