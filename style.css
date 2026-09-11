@@ -227,26 +227,36 @@ body {
   transform: translateY(-3px);
 }
 
-/* ডিফল্ট (লাইট মোড) কালার */
-body {
-  background-color: #ffffff;
-  color: #333333;
-  transition: background-color 0.3s, color 0.3s;
+/* নেভবারের ডানপাশের আইকনগুলোকে এক লাইনে রাখার জন্য */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* বাটন ও ৩ ডটের মাঝের দূরত্ব */
 }
 
-/* ডার্ক মোড কালার */
-body.dark-mode {
-  background-color: #0f172a;
-  color: #f8fafc;
-}
-
-/* সুইচ বাটনের ডিজাইন (গোল বাটন) */
+/* বাটন ডিজাইন */
 #theme-toggle {
-  background-color: #38bdf8;
-  border: none;
-  padding: 10px 14px;
-  border-radius: 50%;
+  background: rgba(56, 189, 248, 0.2);
+  border: 1px solid #38bdf8;
   font-size: 18px;
+  padding: 6px 10px;
+  border-radius: 50%;
   cursor: pointer;
+  outline: none;
 }
 
+/* ----------------------------------
+   ডার্ক মোড স্টাইল (Dark Mode Rules)
+---------------------------------- */
+body.dark-theme {
+  background-color: #0f172a !important;
+  color: #ffffff !important;
+}
+
+/* আপনার কার্ড, হেডার বা সেকশনের ব্যাকগ্রাউন্ডও ডার্ক করতে চান তবে এগুলো যোগ করতে পারেন */
+body.dark-theme header,
+body.dark-theme .card,
+body.dark-theme .container {
+  background-color: #1e293b !important;
+  color: #ffffff !important;
+}
