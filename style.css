@@ -260,3 +260,40 @@ body.dark-theme .container {
   background-color: #1e293b !important;
   color: #ffffff !important;
 }
+/* ----------------------------------
+   স্ক্রিনশটের মতো ডার্ক ব্লু গ্র্যাডিয়েন্ট
+---------------------------------- */
+body.dark-theme {
+  background: radial-gradient(circle at top, #0f2b48 0%, #050b14 100%) !important;
+  color: #e2e8f0 !important;
+}
+
+/* টেক্সট ও সাবটাইটেল কালার */
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme p,
+body.dark-theme span {
+  color: #ffffff !important;
+}
+
+/* নামের লেখাটিতে নিয়ন গ্লো (Neon Glow) এফেক্ট */
+body.dark-theme h1 {
+  color: #38bdf8 !important;
+  text-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+}
+
+/* কার্ড, নেভবার বা বাটনগুলোর ডার্ক ব্যাকগ্রাউন্ড */
+body.dark-theme header,
+body.dark-theme nav,
+body.dark-theme .card {
+  background: transparent !important;
+}
+
+/* বাটনের বর্ডার ও ব্যাকগ্রাউন্ড অ্যাডজাস্টমেন্ট */
+body.dark-theme .btn-outline {
+  border-color: #38bdf8 !important;
+  color: #38bdf8 !important;
+  background: rgba(15, 23, 42, 0.6) !important;
+}
+
