@@ -15,7 +15,7 @@
 
   <!-- ন্যাভবার -->
   <nav class="navbar">
-<button id="theme-toggle">🌙</button> 
+    <button id="theme-toggle">🌙</button> 
     <div class="logo">🤍 WELCOME 🤍</div>
     <div class="menu-icon"><i class="fa-solid fa-bars"></i></div>
   </nav>
@@ -37,11 +37,9 @@
     </p>
 
     <!-- বাটন সেকশন -->
-
     <div class="btn-group">
       <button class="btn btn-primary" onclick="toggleContact()">Say Hello 👋</button>
       <a href="memories.html" class="btn btn-secondary">Know Me <span>→</span></a>
-
     </div>
   </div>
 
@@ -114,22 +112,22 @@
       }
     }
 
-    <script>
-  const toggleBtn = document.getElementById('theme-toggle');
+    // টাইপিং ইফেক্ট চালু করা
+    typeEffect();
 
-  toggleBtn.addEventListener('click', function() {
-    // ডার্ক মোড ক্লাস টগল করবে
-    document.body.classList.toggle('dark-theme');
+    // ডার্ক মোড টগল স্ক্রিপ্ট
+    const toggleBtn = document.getElementById('theme-toggle');
 
-    // বাটন প্রেসের পর আইকন পরিবর্তন
-    if (document.body.classList.contains('dark-theme')) {
-      toggleBtn.textContent = '☀️';
-    } else {
-      toggleBtn.textContent = '🌙';
-    }
-  });
-</script>
+    toggleBtn.addEventListener('click', function() {
+      document.body.classList.toggle('dark-theme');
 
+      if (document.body.classList.contains('dark-theme')) {
+        toggleBtn.textContent = '☀️';
+      } else {
+        toggleBtn.textContent = '🌙';
+      }
+    });
+  </script>
 
 </body>
 </html>
