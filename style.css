@@ -296,6 +296,7 @@ body.dark-theme .btn-outline {
   color: #38bdf8 !important;
   background: rgba(15, 23, 42, 0.6) !important;
 }
+
 /* About Me Container */
 .about-section {
   max-width: 600px;
@@ -307,9 +308,9 @@ body.dark-theme .btn-outline {
 /* Badge Styling */
 .about-badge {
   display: inline-block;
-  background: rgba(56, 189, 248, 0.1);
-  color: #38bdf8;
-  border: 1px solid rgba(56, 189, 248, 0.3);
+  background: rgba(56, 189, 248, 0.15);
+  color: #0083bb;
+  border: 1px solid rgba(56, 189, 248, 0.4);
   padding: 6px 16px;
   border-radius: 20px;
   font-size: 12px;
@@ -322,18 +323,19 @@ body.dark-theme .btn-outline {
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 6px;
+  color: #0083bb;
 }
 
 .title-line {
   width: 50px;
   height: 3px;
-  background: #38bdf8;
+  background: #0083bb;
   margin: 0 auto 20px auto;
   border-radius: 2px;
 }
 
 .about-description {
-  color: #94a3b8;
+  color: #555555;
   font-size: 14px;
   line-height: 1.6;
   margin-bottom: 30px;
@@ -351,13 +353,13 @@ body.dark-theme .btn-outline {
   justify-content: space-between;
   align-items: center;
   padding: 14px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .info-label {
   font-size: 12px;
   font-weight: bold;
-  color: #e2e8f0;
+  color: #333333; /* লাইট মোডে স্পষ্ট কালো কালার */
   display: flex;
   align-items: center;
   gap: 10px;
@@ -365,46 +367,51 @@ body.dark-theme .btn-outline {
 }
 
 .info-label i {
-  color: #38bdf8;
+  color: #0083bb;
   font-size: 14px;
 }
 
 .info-value {
   font-size: 13px;
-  color: #94a3b8;
+  color: #555555; /* স্পষ্ট দৃশ্যমান কালার */
 }
 
 .map-link {
-  color: #38bdf8;
+  color: #0083bb;
   text-decoration: none;
   font-weight: bold;
   margin-left: 4px;
 }
 
-/* Dark Mode Integration */
+/* Dark Mode Integration (ডার্ক মোডে লেখার কালার অ্যাডজাস্টমেন্ট) */
+body.dark-theme .about-badge {
+  color: #38bdf8;
+}
+
+body.dark-theme .about-title {
+  color: #38bdf8;
+}
+
+body.dark-theme .about-description {
+  color: #94a3b8;
+}
+
 body.dark-theme .info-item {
-  border-bottom-color: rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-
-/* Info List & Interests Item Styling */
-.info-list {
-  display: flex !important;
-  flex-direction: column !important;
-  margin-top: 15px;
+body.dark-theme .info-label {
+  color: #e2e8f0;
 }
 
-.info-item {
-  display: flex !important;
-  justify-content: space-between !important;
-  align-items: center !important;
-  padding: 12px 0 !important;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+body.dark-theme .info-label i {
+  color: #38bdf8;
 }
 
-/* ডার্ক মোডে লেখার রঙ সাদা ও স্পষ্ট রাখা */
-body.dark-theme .info-label,
 body.dark-theme .info-value {
-  color: #ffffff !important;
+  color: #cbd5e1;
 }
 
+body.dark-theme .map-link {
+  color: #38bdf8;
+}
