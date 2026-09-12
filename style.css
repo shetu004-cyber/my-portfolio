@@ -387,3 +387,24 @@ body.dark-theme .info-item {
 }
 
 
+/* Info List & Interests Item Styling */
+.info-list {
+  display: flex !important;
+  flex-direction: column !important;
+  margin-top: 15px;
+}
+
+.info-item {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 12px 0 !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+/* ডার্ক মোডে লেখার রঙ সাদা ও স্পষ্ট রাখা */
+body.dark-theme .info-label,
+body.dark-theme .info-value {
+  color: #ffffff !important;
+}
+
