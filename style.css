@@ -296,4 +296,94 @@ body.dark-theme .btn-outline {
   color: #38bdf8 !important;
   background: rgba(15, 23, 42, 0.6) !important;
 }
+/* About Me Container */
+.about-section {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Badge Styling */
+.about-badge {
+  display: inline-block;
+  background: rgba(56, 189, 248, 0.1);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.about-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.title-line {
+  width: 50px;
+  height: 3px;
+  background: #38bdf8;
+  margin: 0 auto 20px auto;
+  border-radius: 2px;
+}
+
+.about-description {
+  color: #94a3b8;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* Info List Styling */
+.info-list {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.info-label {
+  font-size: 12px;
+  font-weight: bold;
+  color: #e2e8f0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  letter-spacing: 0.5px;
+}
+
+.info-label i {
+  color: #38bdf8;
+  font-size: 14px;
+}
+
+.info-value {
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+.map-link {
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 4px;
+}
+
+/* Dark Mode Integration */
+body.dark-theme .info-item {
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
 
