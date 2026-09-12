@@ -8,7 +8,8 @@
 body {
   background: linear-gradient(180deg, #e3f2fd 0%, #ffffff 100%);
   min-height: 100vh;
-  color: #333;
+  color: #1e293b;
+  transition: background 0.3s, color 0.3s;
 }
 
 /* ন্যাভবার */
@@ -39,7 +40,7 @@ body {
   text-align: center;
 }
 
-/* গোলাকার প্রোফাইল ছবি */
+/* প্রোফাইল ছবি */
 .profile-wrapper {
   margin: 20px auto 30px;
   width: 170px;
@@ -66,7 +67,7 @@ body {
 
 .tagline {
   font-size: 18px;
-  color: #444;
+  color: #444444;
   margin-bottom: 20px;
 }
 
@@ -75,13 +76,13 @@ body {
 }
 
 .bio {
-  color: #666;
+  color: #475569;
   font-size: 14px;
   line-height: 1.6;
   margin-bottom: 35px;
 }
 
-/* বাটন কন্টেইনার ও ডিজাইন */
+/* বাটন কন্টেইনার */
 .btn-group {
   display: flex;
   flex-direction: column;
@@ -170,6 +171,7 @@ body {
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   z-index: 1001;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .card-header {
@@ -181,7 +183,7 @@ body {
 
 .card-header h4 {
   margin: 0;
-  color: #222;
+  color: #0f172a;
   font-size: 18px;
   font-weight: 700;
 }
@@ -189,7 +191,7 @@ body {
 .close-icon {
   font-size: 20px;
   cursor: pointer;
-  color: #777;
+  color: #64748b;
 }
 
 /* ইমেইল বক্স */
@@ -197,7 +199,7 @@ body {
   background: #f0f4f8;
   padding: 12px;
   border-radius: 10px;
-  font-size: 14px;
+  font-size: 13px;
   color: #0083bb;
   font-weight: 600;
   display: flex;
@@ -205,6 +207,7 @@ body {
   justify-content: center;
   gap: 8px;
   margin-bottom: 18px;
+  word-break: break-all;
 }
 
 /* সোশাল আইকন ডিজাইন */
@@ -216,7 +219,7 @@ body {
 }
 
 .social-links a {
-  color: #555;
+  color: #475569;
   font-size: 20px;
   text-decoration: none;
   transition: color 0.2s, transform 0.2s;
@@ -227,14 +230,7 @@ body {
   transform: translateY(-3px);
 }
 
-/* নেভবারের ডানপাশের আইকনগুলোকে এক লাইনে রাখার জন্য */
-.nav-right {
-  display: flex;
-  align-items: center;
-  gap: 10px; /* বাটন ও ৩ ডটের মাঝের দূরত্ব */
-}
-
-/* বাটন ডিজাইন */
+/* থিম টগল বাটন */
 #theme-toggle {
   background: rgba(56, 189, 248, 0.2);
   border: 1px solid #38bdf8;
@@ -243,58 +239,6 @@ body {
   border-radius: 50%;
   cursor: pointer;
   outline: none;
-}
-
-/* ----------------------------------
-   ডার্ক মোড স্টাইল (Dark Mode Rules)
----------------------------------- */
-body.dark-theme {
-  background-color: #0f172a !important;
-  color: #ffffff !important;
-}
-
-/* আপনার কার্ড, হেডার বা সেকশনের ব্যাকগ্রাউন্ডও ডার্ক করতে চান তবে এগুলো যোগ করতে পারেন */
-body.dark-theme header,
-body.dark-theme .card,
-body.dark-theme .container {
-  background-color: #1e293b !important;
-  color: #ffffff !important;
-}
-/* ----------------------------------
-   স্ক্রিনশটের মতো ডার্ক ব্লু গ্র্যাডিয়েন্ট
----------------------------------- */
-body.dark-theme {
-  background: radial-gradient(circle at top, #0f2b48 0%, #050b14 100%) !important;
-  color: #e2e8f0 !important;
-}
-
-/* টেক্সট ও সাবটাইটেল কালার */
-body.dark-theme h1,
-body.dark-theme h2,
-body.dark-theme h3,
-body.dark-theme p,
-body.dark-theme span {
-  color: #ffffff !important;
-}
-
-/* নামের লেখাটিতে নিয়ন গ্লো (Neon Glow) এফেক্ট */
-body.dark-theme h1 {
-  color: #38bdf8 !important;
-  text-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
-}
-
-/* কার্ড, নেভবার বা বাটনগুলোর ডার্ক ব্যাকগ্রাউন্ড */
-body.dark-theme header,
-body.dark-theme nav,
-body.dark-theme .card {
-  background: transparent !important;
-}
-
-/* বাটনের বর্ডার ও ব্যাকগ্রাউন্ড অ্যাডজাস্টমেন্ট */
-body.dark-theme .btn-outline {
-  border-color: #38bdf8 !important;
-  color: #38bdf8 !important;
-  background: rgba(15, 23, 42, 0.6) !important;
 }
 
 /* About Me Container */
@@ -308,9 +252,9 @@ body.dark-theme .btn-outline {
 /* Badge Styling */
 .about-badge {
   display: inline-block;
-  background: rgba(56, 189, 248, 0.15);
+  background: rgba(0, 131, 187, 0.1);
   color: #0083bb;
-  border: 1px solid rgba(56, 189, 248, 0.4);
+  border: 1px solid rgba(0, 131, 187, 0.3);
   padding: 6px 16px;
   border-radius: 20px;
   font-size: 12px;
@@ -335,13 +279,13 @@ body.dark-theme .btn-outline {
 }
 
 .about-description {
-  color: #555555;
+  color: #334155;
   font-size: 14px;
   line-height: 1.6;
   margin-bottom: 30px;
 }
 
-/* Info List Styling */
+/* Info List Styling - (ডে মোডে স্পষ্ট ও গাঢ় টেক্সট) */
 .info-list {
   text-align: left;
   display: flex;
@@ -353,13 +297,13 @@ body.dark-theme .btn-outline {
   justify-content: space-between;
   align-items: center;
   padding: 14px 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 }
 
 .info-label {
   font-size: 12px;
-  font-weight: bold;
-  color: #333333; /* লাইট মোডে স্পষ্ট কালো কালার */
+  font-weight: 700;
+  color: #1e293b;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -373,7 +317,8 @@ body.dark-theme .btn-outline {
 
 .info-value {
   font-size: 13px;
-  color: #555555; /* স্পষ্ট দৃশ্যমান কালার */
+  font-weight: 600;
+  color: #334155;
 }
 
 .map-link {
@@ -383,13 +328,68 @@ body.dark-theme .btn-outline {
   margin-left: 4px;
 }
 
-/* Dark Mode Integration (ডার্ক মোডে লেখার কালার অ্যাডজাস্টমেন্ট) */
-body.dark-theme .about-badge {
+/* ----------------------------------
+   ডার্ক মোড স্টাইল (Dark Mode Customization)
+---------------------------------- */
+body.dark-theme {
+  background: radial-gradient(circle at top, #0f2b48 0%, #050b14 100%);
+  color: #e2e8f0;
+}
+
+body.dark-theme .name {
   color: #38bdf8;
+  text-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+}
+
+body.dark-theme .tagline,
+body.dark-theme .tagline span {
+  color: #cbd5e1;
+}
+
+body.dark-theme .bio {
+  color: #94a3b8;
+}
+
+/* কন্টাক্ট মোডাল ডার্ক থিম */
+body.dark-theme .contact-card {
+  background: #1e293b;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .card-header h4 {
+  color: #ffffff;
+}
+
+body.dark-theme .close-icon {
+  color: #94a3b8;
+}
+
+body.dark-theme .email-field {
+  background: #0f172a;
+  color: #38bdf8;
+}
+
+body.dark-theme .social-links a {
+  color: #cbd5e1;
+}
+
+body.dark-theme .social-links a:hover {
+  color: #38bdf8;
+}
+
+/* About Me সেকশন ডার্ক থিম */
+body.dark-theme .about-badge {
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+  border-color: rgba(56, 189, 248, 0.3);
 }
 
 body.dark-theme .about-title {
   color: #38bdf8;
+}
+
+body.dark-theme .title-line {
+  background: #38bdf8;
 }
 
 body.dark-theme .about-description {
@@ -401,7 +401,7 @@ body.dark-theme .info-item {
 }
 
 body.dark-theme .info-label {
-  color: #e2e8f0;
+  color: #ffffff;
 }
 
 body.dark-theme .info-label i {
